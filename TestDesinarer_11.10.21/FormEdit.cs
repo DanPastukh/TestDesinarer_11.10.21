@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TestDesinarer_11._10._21
 {
-    public partial class Form1 : Form
+    public partial class FormEdit : Form
     {
-        public Form1()
+        public FormEdit()
         {
             InitializeComponent();
         }
