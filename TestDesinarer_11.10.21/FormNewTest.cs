@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Xml2CSharp;
+using TestDesignerDLL;
+//using Xml2CSharp;
 
 namespace TestDesinarer_11._10._21
 {

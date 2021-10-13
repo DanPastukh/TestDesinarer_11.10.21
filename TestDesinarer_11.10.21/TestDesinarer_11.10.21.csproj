@@ -98,5 +98,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestDesignerDLL\TestDesignerDLL.csproj">
+      <Project>{5b593354-83f7-43c1-be7f-1ca3035ef87c}</Project>
+      <Name>TestDesignerDLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
