@@ -10,67 +10,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 using TestDesignerDLL;
-//using Xml2CSharp;
 
 namespace TestDesinarer_11._10._21
 {
     public partial class FormNewTest : Form
     {
         TestDll test = new TestDll();
-        
-        //List<QuestionDLL> questions = new List<QuestionDLL>();
         QuestionDLL question = new QuestionDLL();
-       // List<AnswerDLL> answers = new List<AnswerDLL>();
         AnswerDLL answer= new AnswerDLL();
         public string FileName { get; set; }
         public FormNewTest()
         {
             InitializeComponent();
-            
         }
-
-        private void textBoxAuthor_TextChanged(object sender, EventArgs e)
-        {
-            test.Author = textBoxAuthor.Text;
-        }
-
-        private void textBoxTitle_TextChanged(object sender, EventArgs e)
-        {
-            test.TestName = textBoxTitle.Text;
-        }
-
-        private void textBoxQuestion_TextChanged(object sender, EventArgs e)
-        {
-            question.Description = textBoxQuestion.Text;
-        }
-
-        private void numericUpDownDificulty_ValueChanged(object sender, EventArgs e)
-        {
-            question.Difficulty = numericUpDownDificulty.Value.ToString();
-        }
-
         private void buttonAddCuestion_Click(object sender, EventArgs e)
         {
+            test.Author = textBoxAuthor.Text;
+            test.TestName = textBoxTitle.Text;
+            question.Description = textBoxQuestion.Text;
+            question.Difficulty = numericUpDownDificulty.Value.ToString();
             test.Questions.Add(question);
             groupBoxAnswer.Enabled = true;
             buttonAddQuestion.Enabled = false;
-           
         }
-
-        private void textBoxAnswer_TextChanged(object sender, EventArgs e)
-        {
-            answer.Description = textBoxAnswer.Text;
-            answer.IsRight = "false";
-        }
-
-        private void checkBoxIsRight_CheckedChanged(object sender, EventArgs e)
-        {
-            answer.IsRight = checkBoxIsRight.Checked.ToString().ToLower();
-            
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            answer.Description = textBoxAnswer.Text;
+            answer.IsRight = checkBoxIsRight.Checked.ToString().ToLower();
             test.Questions[test.Questions.Count-1].Answers.Add(answer);
             listBoxAnswers.Items.Add(answer.Description);
             if (test.Questions[test.Questions.Count - 1].Answers.Count>1)
@@ -82,30 +48,23 @@ namespace TestDesinarer_11._10._21
             {
                 checkBoxIsRight.Enabled = false;
             }
-
             answer = new AnswerDLL();
             textBoxAnswer.Text = "";
             checkBoxIsRight.Checked = false;
-
         }
 
         private void buttonNextQuest_Click(object sender, EventArgs e)
         {
-
             buttonAddQuestion.Enabled = true;
             buttonNextQuest.Enabled = false;
             textBoxQuestion.Text = "";
             groupBoxAnswer.Enabled = false;
             numericUpDownDificulty.Value = 0;
-            //textBoxAnswer.Text = "";
+            checkBoxIsRight.Enabled = true;
             listBoxAnswers.Items.Clear();
             question = new QuestionDLL();
-
         }
-        private void textBoxFileName_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
         private void buttonSaveFile_Click(object sender, EventArgs e)
         {
             if (textBoxFileName.Text!="")

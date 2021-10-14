@@ -76,7 +76,6 @@ namespace TestDesinarer_11._10._21
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(123, 20);
             this.textBoxTitle.TabIndex = 4;
-            this.textBoxTitle.TextChanged += new System.EventHandler(this.textBoxTitle_TextChanged);
             // 
             // textBoxAuthor
             // 
@@ -84,7 +83,6 @@ namespace TestDesinarer_11._10._21
             this.textBoxAuthor.Name = "textBoxAuthor";
             this.textBoxAuthor.Size = new System.Drawing.Size(123, 20);
             this.textBoxAuthor.TabIndex = 3;
-            this.textBoxAuthor.TextChanged += new System.EventHandler(this.textBoxAuthor_TextChanged);
             // 
             // label2
             // 
@@ -163,7 +161,6 @@ namespace TestDesinarer_11._10._21
             this.numericUpDownDificulty.Name = "numericUpDownDificulty";
             this.numericUpDownDificulty.Size = new System.Drawing.Size(38, 20);
             this.numericUpDownDificulty.TabIndex = 4;
-            this.numericUpDownDificulty.ValueChanged += new System.EventHandler(this.numericUpDownDificulty_ValueChanged);
             // 
             // textBoxQuestion
             // 
@@ -172,7 +169,6 @@ namespace TestDesinarer_11._10._21
             this.textBoxQuestion.Name = "textBoxQuestion";
             this.textBoxQuestion.Size = new System.Drawing.Size(369, 52);
             this.textBoxQuestion.TabIndex = 3;
-            this.textBoxQuestion.TextChanged += new System.EventHandler(this.textBoxQuestion_TextChanged);
             // 
             // label4
             // 
@@ -215,7 +211,6 @@ namespace TestDesinarer_11._10._21
             this.checkBoxIsRight.TabIndex = 5;
             this.checkBoxIsRight.Text = "Is Right";
             this.checkBoxIsRight.UseVisualStyleBackColor = true;
-            this.checkBoxIsRight.CheckedChanged += new System.EventHandler(this.checkBoxIsRight_CheckedChanged);
             // 
             // textBoxAnswer
             // 
@@ -224,7 +219,6 @@ namespace TestDesinarer_11._10._21
             this.textBoxAnswer.Name = "textBoxAnswer";
             this.textBoxAnswer.Size = new System.Drawing.Size(366, 25);
             this.textBoxAnswer.TabIndex = 4;
-            this.textBoxAnswer.TextChanged += new System.EventHandler(this.textBoxAnswer_TextChanged);
             // 
             // groupBoxSaveFile
             // 

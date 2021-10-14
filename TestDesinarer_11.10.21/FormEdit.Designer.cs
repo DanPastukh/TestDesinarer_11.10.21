@@ -36,19 +36,21 @@ namespace TestDesinarer_11._10._21
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxQuestion = new System.Windows.Forms.GroupBox();
+            this.listBoxQuestions = new System.Windows.Forms.ListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.buttonEditQuestion = new System.Windows.Forms.Button();
             this.numericUpDownDificulty = new System.Windows.Forms.NumericUpDown();
             this.textBoxQuestion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.listBoxQuestions = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxAnswers = new System.Windows.Forms.ComboBox();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.checkBoxIsRight = new System.Windows.Forms.CheckBox();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
-            this.comboBoxAnswers = new System.Windows.Forms.ComboBox();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.openFileDialogOpeTest = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogSaveTest = new System.Windows.Forms.SaveFileDialog();
             this.groupBoxInfo.SuspendLayout();
             this.groupBoxQuestion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDificulty)).BeginInit();
@@ -57,12 +59,13 @@ namespace TestDesinarer_11._10._21
             // 
             // buttonOpenTest
             // 
-            this.buttonOpenTest.Location = new System.Drawing.Point(12, 278);
+            this.buttonOpenTest.Location = new System.Drawing.Point(12, 19);
             this.buttonOpenTest.Name = "buttonOpenTest";
             this.buttonOpenTest.Size = new System.Drawing.Size(103, 33);
             this.buttonOpenTest.TabIndex = 0;
             this.buttonOpenTest.Text = "Open Test for Edit";
             this.buttonOpenTest.UseVisualStyleBackColor = true;
+            this.buttonOpenTest.Click += new System.EventHandler(this.buttonOpenTest_Click);
             // 
             // groupBoxInfo
             // 
@@ -70,7 +73,7 @@ namespace TestDesinarer_11._10._21
             this.groupBoxInfo.Controls.Add(this.textBoxAuthor);
             this.groupBoxInfo.Controls.Add(this.label2);
             this.groupBoxInfo.Controls.Add(this.label1);
-            this.groupBoxInfo.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxInfo.Location = new System.Drawing.Point(12, 58);
             this.groupBoxInfo.Name = "groupBoxInfo";
             this.groupBoxInfo.Size = new System.Drawing.Size(200, 86);
             this.groupBoxInfo.TabIndex = 1;
@@ -124,6 +127,25 @@ namespace TestDesinarer_11._10._21
             this.groupBoxQuestion.TabStop = false;
             this.groupBoxQuestion.Text = "Question";
             // 
+            // listBoxQuestions
+            // 
+            this.listBoxQuestions.FormattingEnabled = true;
+            this.listBoxQuestions.Location = new System.Drawing.Point(7, 19);
+            this.listBoxQuestions.Name = "listBoxQuestions";
+            this.listBoxQuestions.Size = new System.Drawing.Size(207, 134);
+            this.listBoxQuestions.TabIndex = 7;
+            this.listBoxQuestions.SelectedIndexChanged += new System.EventHandler(this.listBoxQuestions_SelectedIndexChanged);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(127, 256);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 37);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Remove Question";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // buttonEditQuestion
             // 
             this.buttonEditQuestion.Location = new System.Drawing.Point(7, 256);
@@ -132,6 +154,7 @@ namespace TestDesinarer_11._10._21
             this.buttonEditQuestion.TabIndex = 5;
             this.buttonEditQuestion.Text = "Edit Question";
             this.buttonEditQuestion.UseVisualStyleBackColor = true;
+            this.buttonEditQuestion.Click += new System.EventHandler(this.buttonEditQuestion_Click);
             // 
             // numericUpDownDificulty
             // 
@@ -157,23 +180,6 @@ namespace TestDesinarer_11._10._21
             this.label4.TabIndex = 1;
             this.label4.Text = "Dificulty";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(127, 256);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 37);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Remove Question";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // listBoxQuestions
-            // 
-            this.listBoxQuestions.FormattingEnabled = true;
-            this.listBoxQuestions.Location = new System.Drawing.Point(6, 16);
-            this.listBoxQuestions.Name = "listBoxQuestions";
-            this.listBoxQuestions.Size = new System.Drawing.Size(207, 134);
-            this.listBoxQuestions.TabIndex = 7;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.comboBoxAnswers);
@@ -181,12 +187,21 @@ namespace TestDesinarer_11._10._21
             this.groupBox1.Controls.Add(this.buttonEdit);
             this.groupBox1.Controls.Add(this.checkBoxIsRight);
             this.groupBox1.Controls.Add(this.textBoxAnswer);
-            this.groupBox1.Location = new System.Drawing.Point(12, 104);
+            this.groupBox1.Location = new System.Drawing.Point(12, 143);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(234, 168);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Answers";
+            // 
+            // comboBoxAnswers
+            // 
+            this.comboBoxAnswers.FormattingEnabled = true;
+            this.comboBoxAnswers.Location = new System.Drawing.Point(9, 16);
+            this.comboBoxAnswers.Name = "comboBoxAnswers";
+            this.comboBoxAnswers.Size = new System.Drawing.Size(219, 21);
+            this.comboBoxAnswers.TabIndex = 7;
+            this.comboBoxAnswers.SelectedIndexChanged += new System.EventHandler(this.comboBoxAnswers_SelectedIndexChanged);
             // 
             // buttonRemove
             // 
@@ -196,6 +211,7 @@ namespace TestDesinarer_11._10._21
             this.buttonRemove.TabIndex = 6;
             this.buttonRemove.Text = "Remove ";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // buttonEdit
             // 
@@ -205,6 +221,7 @@ namespace TestDesinarer_11._10._21
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.Text = "Edit ";
             this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // checkBoxIsRight
             // 
@@ -224,22 +241,15 @@ namespace TestDesinarer_11._10._21
             this.textBoxAnswer.Size = new System.Drawing.Size(216, 51);
             this.textBoxAnswer.TabIndex = 4;
             // 
-            // comboBoxAnswers
-            // 
-            this.comboBoxAnswers.FormattingEnabled = true;
-            this.comboBoxAnswers.Location = new System.Drawing.Point(9, 16);
-            this.comboBoxAnswers.Name = "comboBoxAnswers";
-            this.comboBoxAnswers.Size = new System.Drawing.Size(219, 21);
-            this.comboBoxAnswers.TabIndex = 7;
-            // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(143, 278);
+            this.buttonSave.Location = new System.Drawing.Point(143, 19);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(103, 33);
             this.buttonSave.TabIndex = 5;
             this.buttonSave.Text = "Save Test";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // FormEdit
             // 
@@ -286,5 +296,7 @@ namespace TestDesinarer_11._10._21
         private System.Windows.Forms.CheckBox checkBoxIsRight;
         private System.Windows.Forms.TextBox textBoxAnswer;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.OpenFileDialog openFileDialogOpeTest;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogSaveTest;
     }
 }
