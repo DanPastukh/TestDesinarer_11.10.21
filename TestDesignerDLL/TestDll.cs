@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace TestDesignerDLL
 {
 	[XmlRoot(ElementName = "Test")]
-	public class Test
+	public class TestDll
 	{
 		[XmlElement(ElementName = "Author")]
 		public string Author { get; set; }
@@ -16,7 +16,12 @@ namespace TestDesignerDLL
 		public string TestName { get; set; }
 		//[XmlElement(ElementName = "QuestionCount")]
 		//public string QuestionCount { get; set; }
-		[XmlElement(ElementName = "Question")]
-		public List<Question> Question { get; set; }
+		[XmlElement(ElementName = "Questions")]
+		public List<QuestionDLL> Questions { get; set; }
+        public TestDll()
+        {
+			Questions = new List<QuestionDLL>();
+		}
+		
 	}
 }

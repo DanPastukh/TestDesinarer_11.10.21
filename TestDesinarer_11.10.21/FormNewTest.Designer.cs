@@ -34,26 +34,26 @@ namespace TestDesinarer_11._10._21
             this.textBoxAuthor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBoxAnswer = new System.Windows.Forms.GroupBox();
+            this.groupBoxAnswers = new System.Windows.Forms.GroupBox();
+            this.listBoxAnswers = new System.Windows.Forms.ListBox();
             this.groupBoxQuestion = new System.Windows.Forms.GroupBox();
-            this.buttonAddCuestion = new System.Windows.Forms.Button();
+            this.buttonNextQuest = new System.Windows.Forms.Button();
+            this.buttonAddQuestion = new System.Windows.Forms.Button();
             this.numericUpDownDificulty = new System.Windows.Forms.NumericUpDown();
             this.textBoxQuestion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonNext = new System.Windows.Forms.Button();
+            this.groupBoxAnswer = new System.Windows.Forms.GroupBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.checkBoxIsRight = new System.Windows.Forms.CheckBox();
             this.textBoxAnswer = new System.Windows.Forms.TextBox();
             this.groupBoxSaveFile = new System.Windows.Forms.GroupBox();
             this.buttonSaveFile = new System.Windows.Forms.Button();
             this.textBoxFileName = new System.Windows.Forms.TextBox();
-            this.listBoxAnswers = new System.Windows.Forms.ListBox();
             this.groupBoxInfo.SuspendLayout();
-            this.groupBoxAnswer.SuspendLayout();
+            this.groupBoxAnswers.SuspendLayout();
             this.groupBoxQuestion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDificulty)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxAnswer.SuspendLayout();
             this.groupBoxSaveFile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,19 +104,28 @@ namespace TestDesinarer_11._10._21
             this.label1.TabIndex = 1;
             this.label1.Text = "Author";
             // 
-            // groupBoxAnswer
+            // groupBoxAnswers
             // 
-            this.groupBoxAnswer.Controls.Add(this.listBoxAnswers);
-            this.groupBoxAnswer.Location = new System.Drawing.Point(12, 117);
-            this.groupBoxAnswer.Name = "groupBoxAnswer";
-            this.groupBoxAnswer.Size = new System.Drawing.Size(200, 167);
-            this.groupBoxAnswer.TabIndex = 1;
-            this.groupBoxAnswer.TabStop = false;
-            this.groupBoxAnswer.Text = "Answers";
+            this.groupBoxAnswers.Controls.Add(this.listBoxAnswers);
+            this.groupBoxAnswers.Location = new System.Drawing.Point(12, 117);
+            this.groupBoxAnswers.Name = "groupBoxAnswers";
+            this.groupBoxAnswers.Size = new System.Drawing.Size(200, 167);
+            this.groupBoxAnswers.TabIndex = 1;
+            this.groupBoxAnswers.TabStop = false;
+            this.groupBoxAnswers.Text = "Answers";
+            // 
+            // listBoxAnswers
+            // 
+            this.listBoxAnswers.FormattingEnabled = true;
+            this.listBoxAnswers.Location = new System.Drawing.Point(3, 16);
+            this.listBoxAnswers.Name = "listBoxAnswers";
+            this.listBoxAnswers.Size = new System.Drawing.Size(191, 147);
+            this.listBoxAnswers.TabIndex = 0;
             // 
             // groupBoxQuestion
             // 
-            this.groupBoxQuestion.Controls.Add(this.buttonAddCuestion);
+            this.groupBoxQuestion.Controls.Add(this.buttonNextQuest);
+            this.groupBoxQuestion.Controls.Add(this.buttonAddQuestion);
             this.groupBoxQuestion.Controls.Add(this.numericUpDownDificulty);
             this.groupBoxQuestion.Controls.Add(this.textBoxQuestion);
             this.groupBoxQuestion.Controls.Add(this.label4);
@@ -127,16 +136,26 @@ namespace TestDesinarer_11._10._21
             this.groupBoxQuestion.TabStop = false;
             this.groupBoxQuestion.Text = "Question";
             // 
-            // buttonAddCuestion
+            // buttonNextQuest
             // 
-            this.buttonAddCuestion.Enabled = false;
-            this.buttonAddCuestion.Location = new System.Drawing.Point(140, 82);
-            this.buttonAddCuestion.Name = "buttonAddCuestion";
-            this.buttonAddCuestion.Size = new System.Drawing.Size(237, 37);
-            this.buttonAddCuestion.TabIndex = 5;
-            this.buttonAddCuestion.Text = "Add Question";
-            this.buttonAddCuestion.UseVisualStyleBackColor = true;
-            this.buttonAddCuestion.Click += new System.EventHandler(this.buttonAddCuestion_Click);
+            this.buttonNextQuest.Enabled = false;
+            this.buttonNextQuest.Location = new System.Drawing.Point(275, 82);
+            this.buttonNextQuest.Name = "buttonNextQuest";
+            this.buttonNextQuest.Size = new System.Drawing.Size(100, 37);
+            this.buttonNextQuest.TabIndex = 6;
+            this.buttonNextQuest.Text = "Next Question";
+            this.buttonNextQuest.UseVisualStyleBackColor = true;
+            this.buttonNextQuest.Click += new System.EventHandler(this.buttonNextQuest_Click);
+            // 
+            // buttonAddQuestion
+            // 
+            this.buttonAddQuestion.Location = new System.Drawing.Point(169, 82);
+            this.buttonAddQuestion.Name = "buttonAddQuestion";
+            this.buttonAddQuestion.Size = new System.Drawing.Size(100, 37);
+            this.buttonAddQuestion.TabIndex = 5;
+            this.buttonAddQuestion.Text = "Add Question";
+            this.buttonAddQuestion.UseVisualStyleBackColor = true;
+            this.buttonAddQuestion.Click += new System.EventHandler(this.buttonAddCuestion_Click);
             // 
             // numericUpDownDificulty
             // 
@@ -151,7 +170,7 @@ namespace TestDesinarer_11._10._21
             this.textBoxQuestion.Location = new System.Drawing.Point(6, 19);
             this.textBoxQuestion.Multiline = true;
             this.textBoxQuestion.Name = "textBoxQuestion";
-            this.textBoxQuestion.Size = new System.Drawing.Size(371, 52);
+            this.textBoxQuestion.Size = new System.Drawing.Size(369, 52);
             this.textBoxQuestion.TabIndex = 3;
             this.textBoxQuestion.TextChanged += new System.EventHandler(this.textBoxQuestion_TextChanged);
             // 
@@ -164,31 +183,22 @@ namespace TestDesinarer_11._10._21
             this.label4.TabIndex = 1;
             this.label4.Text = "Dificulty";
             // 
-            // groupBox1
+            // groupBoxAnswer
             // 
-            this.groupBox1.Controls.Add(this.buttonNext);
-            this.groupBox1.Controls.Add(this.buttonAdd);
-            this.groupBox1.Controls.Add(this.checkBoxIsRight);
-            this.groupBox1.Controls.Add(this.textBoxAnswer);
-            this.groupBox1.Location = new System.Drawing.Point(237, 143);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(383, 76);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Answer";
-            // 
-            // buttonNext
-            // 
-            this.buttonNext.Location = new System.Drawing.Point(246, 46);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(131, 23);
-            this.buttonNext.TabIndex = 6;
-            this.buttonNext.Text = "Next Answer";
-            this.buttonNext.UseVisualStyleBackColor = true;
+            this.groupBoxAnswer.Controls.Add(this.buttonAdd);
+            this.groupBoxAnswer.Controls.Add(this.checkBoxIsRight);
+            this.groupBoxAnswer.Controls.Add(this.textBoxAnswer);
+            this.groupBoxAnswer.Enabled = false;
+            this.groupBoxAnswer.Location = new System.Drawing.Point(237, 143);
+            this.groupBoxAnswer.Name = "groupBoxAnswer";
+            this.groupBoxAnswer.Size = new System.Drawing.Size(383, 76);
+            this.groupBoxAnswer.TabIndex = 3;
+            this.groupBoxAnswer.TabStop = false;
+            this.groupBoxAnswer.Text = "Answer";
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(110, 46);
+            this.buttonAdd.Location = new System.Drawing.Point(245, 47);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(130, 23);
             this.buttonAdd.TabIndex = 4;
@@ -212,7 +222,7 @@ namespace TestDesinarer_11._10._21
             this.textBoxAnswer.Location = new System.Drawing.Point(9, 19);
             this.textBoxAnswer.Multiline = true;
             this.textBoxAnswer.Name = "textBoxAnswer";
-            this.textBoxAnswer.Size = new System.Drawing.Size(368, 25);
+            this.textBoxAnswer.Size = new System.Drawing.Size(366, 25);
             this.textBoxAnswer.TabIndex = 4;
             this.textBoxAnswer.TextChanged += new System.EventHandler(this.textBoxAnswer_TextChanged);
             // 
@@ -220,6 +230,7 @@ namespace TestDesinarer_11._10._21
             // 
             this.groupBoxSaveFile.Controls.Add(this.buttonSaveFile);
             this.groupBoxSaveFile.Controls.Add(this.textBoxFileName);
+            this.groupBoxSaveFile.Enabled = false;
             this.groupBoxSaveFile.Location = new System.Drawing.Point(237, 225);
             this.groupBoxSaveFile.Name = "groupBoxSaveFile";
             this.groupBoxSaveFile.Size = new System.Drawing.Size(383, 59);
@@ -235,6 +246,7 @@ namespace TestDesinarer_11._10._21
             this.buttonSaveFile.TabIndex = 6;
             this.buttonSaveFile.Text = "SaveFile";
             this.buttonSaveFile.UseVisualStyleBackColor = true;
+            this.buttonSaveFile.Click += new System.EventHandler(this.buttonSaveFile_Click);
             // 
             // textBoxFileName
             // 
@@ -244,34 +256,26 @@ namespace TestDesinarer_11._10._21
             this.textBoxFileName.Size = new System.Drawing.Size(253, 25);
             this.textBoxFileName.TabIndex = 4;
             // 
-            // listBoxAnswers
-            // 
-            this.listBoxAnswers.FormattingEnabled = true;
-            this.listBoxAnswers.Location = new System.Drawing.Point(3, 16);
-            this.listBoxAnswers.Name = "listBoxAnswers";
-            this.listBoxAnswers.Size = new System.Drawing.Size(191, 147);
-            this.listBoxAnswers.TabIndex = 0;
-            // 
             // FormNewTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 293);
             this.Controls.Add(this.groupBoxSaveFile);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBoxQuestion);
             this.Controls.Add(this.groupBoxAnswer);
+            this.Controls.Add(this.groupBoxQuestion);
+            this.Controls.Add(this.groupBoxAnswers);
             this.Controls.Add(this.groupBoxInfo);
             this.Name = "FormNewTest";
             this.Text = "FormNewTest";
             this.groupBoxInfo.ResumeLayout(false);
             this.groupBoxInfo.PerformLayout();
-            this.groupBoxAnswer.ResumeLayout(false);
+            this.groupBoxAnswers.ResumeLayout(false);
             this.groupBoxQuestion.ResumeLayout(false);
             this.groupBoxQuestion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDificulty)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxAnswer.ResumeLayout(false);
+            this.groupBoxAnswer.PerformLayout();
             this.groupBoxSaveFile.ResumeLayout(false);
             this.groupBoxSaveFile.PerformLayout();
             this.ResumeLayout(false);
@@ -285,20 +289,20 @@ namespace TestDesinarer_11._10._21
         private System.Windows.Forms.TextBox textBoxAuthor;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBoxAnswer;
+        private System.Windows.Forms.GroupBox groupBoxAnswers;
         private System.Windows.Forms.GroupBox groupBoxQuestion;
-        private System.Windows.Forms.Button buttonAddCuestion;
+        private System.Windows.Forms.Button buttonAddQuestion;
         private System.Windows.Forms.NumericUpDown numericUpDownDificulty;
         private System.Windows.Forms.TextBox textBoxQuestion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxAnswer;
         private System.Windows.Forms.TextBox textBoxAnswer;
-        private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.CheckBox checkBoxIsRight;
         private System.Windows.Forms.GroupBox groupBoxSaveFile;
         private System.Windows.Forms.Button buttonSaveFile;
         private System.Windows.Forms.TextBox textBoxFileName;
         private System.Windows.Forms.ListBox listBoxAnswers;
+        private System.Windows.Forms.Button buttonNextQuest;
     }
 }

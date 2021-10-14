@@ -7,14 +7,12 @@ using System.Xml.Serialization;
 
 namespace TestDesignerDLL
 {
-	[XmlRoot(ElementName = "Question")]
-	public class Question
+	[XmlRoot(ElementName = "Answer")]
+	public class AnswerDLL
 	{
 		[XmlElement(ElementName = "Description")]
 		public string Description { get; set; }
-		[XmlElement(ElementName = "Difficulty")]
-		public string Difficulty { get; set; }
-		[XmlElement(ElementName = "Answer")]
-		public List<Answer> Answer { get; set; }
+		[XmlElement(ElementName = "IsRight")]
+		public string IsRight { get; set; }
 	}
 }
