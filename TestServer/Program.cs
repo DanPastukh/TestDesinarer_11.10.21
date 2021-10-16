@@ -16,7 +16,7 @@ namespace TestServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTestServer());
+            Application.Run(new FormEnterServer());
         }
     }
 }

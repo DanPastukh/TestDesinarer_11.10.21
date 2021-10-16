@@ -29,36 +29,31 @@ namespace TestServer
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPassWord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonLogin = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.groupBoxLogin = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBoxLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBoxLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxLogin.Location = new System.Drawing.Point(65, 19);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(220, 20);
+            this.textBoxLogin.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxPassWord
             // 
-            this.textBox2.Location = new System.Drawing.Point(283, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
+            this.textBoxPassWord.Location = new System.Drawing.Point(65, 51);
+            this.textBoxPassWord.Name = "textBoxPassWord";
+            this.textBoxPassWord.PasswordChar = '*';
+            this.textBoxPassWord.Size = new System.Drawing.Size(220, 20);
+            this.textBoxPassWord.TabIndex = 1;
             // 
             // label2
             // 
@@ -69,38 +64,70 @@ namespace TestServer
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
-            // button1
+            // buttonLogin
             // 
-            this.button1.Location = new System.Drawing.Point(57, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonLogin.Location = new System.Drawing.Point(65, 92);
+            this.buttonLogin.Name = "buttonLogin";
+            this.buttonLogin.Size = new System.Drawing.Size(95, 23);
+            this.buttonLogin.TabIndex = 4;
+            this.buttonLogin.Text = "Log in";
+            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // buttonCancel
             // 
-            this.button2.Location = new System.Drawing.Point(283, 106);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonCancel.Location = new System.Drawing.Point(194, 92);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(91, 23);
+            this.buttonCancel.TabIndex = 5;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // groupBoxLogin
+            // 
+            this.groupBoxLogin.Controls.Add(this.label3);
+            this.groupBoxLogin.Controls.Add(this.buttonCancel);
+            this.groupBoxLogin.Controls.Add(this.buttonLogin);
+            this.groupBoxLogin.Controls.Add(this.textBoxPassWord);
+            this.groupBoxLogin.Controls.Add(this.label4);
+            this.groupBoxLogin.Controls.Add(this.textBoxLogin);
+            this.groupBoxLogin.Location = new System.Drawing.Point(25, 14);
+            this.groupBoxLogin.Name = "groupBoxLogin";
+            this.groupBoxLogin.Size = new System.Drawing.Size(311, 138);
+            this.groupBoxLogin.TabIndex = 6;
+            this.groupBoxLogin.TabStop = false;
+            this.groupBoxLogin.Text = "Sign in";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Login";
             // 
             // FormEnterServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 171);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(363, 164);
+            this.Controls.Add(this.groupBoxLogin);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Name = "FormEnterServer";
             this.Text = "Server";
+            this.groupBoxLogin.ResumeLayout(false);
+            this.groupBoxLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,12 +135,14 @@ namespace TestServer
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPassWord;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.GroupBox groupBoxLogin;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
