@@ -22,6 +22,8 @@ namespace TestServer
         User user;
         public void FillDatagreeds()
         {
+
+            //Groups
             dataGridAllGroups.DataSource = repGroup.GetAllData().Select(x => new { Id = x.Id, Name = x.Name }).ToList();
             dataGridAddG.DataSource = repGroup.GetAllData().Select(x => new { Id = x.Id, Name = x.Name }).ToList();
             dataGridEditG.DataSource = repGroup.GetAllData().Select(x => new { Id = x.Id, Name = x.Name }).ToList();
@@ -34,8 +36,43 @@ namespace TestServer
                 Password = x.Password,
                 IsAdmin = x.IsAdmin
             }).ToList();
+            dataGridViewUinG.DataSource = null; 
             comboBoxAdUtoG.Items.Clear();
             comboBoxAdUtoG.Items.AddRange(repGroup.GetAllData().Select(x => x.Name).ToArray());
+            //Users
+            dataGridAllU.DataSource = repUser.GetAllData().Select(x => new {
+                Id = x.Id,
+                FirstName = x.FName,
+                LastName = x.LName,
+                Login = x.Login,
+                Password = x.Password,
+                IsAdmin = x.IsAdmin
+            }).ToList();
+            dataGridViewAddU.DataSource = repUser.GetAllData().Select(x => new {
+                Id = x.Id,
+                FirsName = x.FName,
+                LastName = x.LName,
+                Login = x.Login,
+                Password = x.Password,
+                IsAdmin = x.IsAdmin
+            }).ToList();
+            dataGridEditU.DataSource = repUser.GetAllData().Select(x => new {
+                Id = x.Id,
+                FirstName = x.FName,
+                LastName = x.LName,
+                Login = x.Login,
+                Password = x.Password,
+                IsAdmin = x.IsAdmin
+            }).ToList();
+            dataGridDelUser.DataSource = repUser.GetAllData().Select(x => new {
+                Id = x.Id,
+                FirstName = x.FName,
+                LastName = x.LName,
+                Login = x.Login,
+                Password = x.Password,
+                IsAdmin = x.IsAdmin
+            }).ToList();
+
         }
         public FormTestServer()
         {
@@ -49,71 +86,46 @@ namespace TestServer
             repGroup = work.Repository<Group>();
             repUser = work.Repository<User>();
             FillDatagreeds();
-
-            //repGroup.Add(new Group() { Name = "Group1" });
-            //repGroup.Add(new Group() { Name = "Group2" });
-            //repGroup.Add(new Group() { Name = "Group3" });
-            //repGroup.Add(new Group() { Name = "Group4" });
-            //repGroup.Add(new Group() { Name = "Group5" });
-
-            //IGenericRepository<User> repUser = work.Repository<User>();
-            //repUser.Add(new User() { FName = "u1", LName = "user1", Login = "u1", Password = "u1", IsAdmin = false });
-            //repUser.Add(new User() { FName = "u2", LName = "user2", Login = "u2", Password = "u2", IsAdmin = false });
-            //repUser.Add(new User() { FName = "u3", LName = "user3", Login = "u3", Password = "u3", IsAdmin = false });
-            //repUser.Add(new User() { FName = "u4", LName = "user4", Login = "u4", Password = "u4", IsAdmin = false });
-            //repUser.Add(new User() { FName = "u5", LName = "user5", Login = "u5", Password = "u5", IsAdmin = false });
             
             
+
+
         }
-
+        #region//Groups
         private void buttonAddGroupe_Click(object sender, EventArgs e)
         {
             Group group = new Group()
             {
                 Name = textBoxAddGroupe.Text
             };
-            repGroup = work.Repository<Group>();
             repGroup.Add(group);
-            dataGridAddG.DataSource = repGroup.GetAllData().Select(x => new
-            {
-                Id = x.Id,
-                Name = x.Name,
-            }).ToList();
             FillDatagreeds();
         }
 
         private void dataGridEditG_MouseClick(object sender, MouseEventArgs e)
         {
-            repGroup = work.Repository<Group>();
             var id = dataGridEditG.SelectedRows[0].Cells[0].Value;
             group = repGroup.FindById(id);
             textBoxEditGroupe.Text = group.Name;
         }
-        private void textBoxEditGroupe_TextChanged(object sender, EventArgs e)
-        {
-            group.Name = textBoxEditGroupe.Text;
-        }
         private void buttonEditGroupe_Click(object sender, EventArgs e)
         {
-            repGroup = work.Repository<Group>();
+            group.Name = textBoxEditGroupe.Text;
             repGroup.Update(group);
-            dataGridEditG.DataSource = repGroup.GetAllData().Select(x => new { Id = x.Id, Name = x.Name }).ToList();
             group = null;
             FillDatagreeds();
+            textBoxEditGroupe.Text = "";
         }
 
         private void dataGridDelG_MouseClick(object sender, MouseEventArgs e)
         {
-            repGroup = work.Repository<Group>();
             var id = dataGridDelG.SelectedRows[0].Cells[0].Value;
             group = repGroup.FindById(id);
             textBoxDelGr.Text = group.Name;
         }
         private void buttonDelGr_Click(object sender, EventArgs e)
         {
-            repGroup = work.Repository<Group>();
             repGroup.Remove(group);
-            dataGridDelG.DataSource = repGroup.GetAllData().Select(x => new { Id = x.Id, Name = x.Name }).ToList();
             textBoxDelGr.Text = "";
             group = null;
             FillDatagreeds();
@@ -121,8 +133,8 @@ namespace TestServer
 
         private void comboBoxAdUtoG_SelectedIndexChanged(object sender, EventArgs e)
         {
-            repGroup = work.Repository<Group>();
             group= repGroup.FindAll(x => x.Name == comboBoxAdUtoG.SelectedItem.ToString()).FirstOrDefault();
+            FillDatagreeds();
             dataGridViewUinG.DataSource = group.Users.Select(x => new
             {
                 Id = x.Id,
@@ -131,6 +143,7 @@ namespace TestServer
                 IsAdmin = x.IsAdmin,
                 Group = group.Name
             }).ToList();
+            //comboBoxAdUtoG.Text = group.Name;
         }
         private void dataGridViewUforG_MouseClick(object sender, MouseEventArgs e)
         {
@@ -184,6 +197,118 @@ namespace TestServer
                 IsAdmin = x.IsAdmin,
                 Group = group.Name
             }).ToList();
+        }
+        #endregion
+
+       
+        private void buttonAddU_Click(object sender, EventArgs e)
+        {
+            user = repUser.FindAll(x => x.Login == textBoxLogin.Text).FirstOrDefault();
+            if (textBoxFName.Text != "" && textBoxLname.Text != "" && textBoxLogin.Text != "" && textBoxPwd.Text != ""&& textBoxConfPwd.Text!="") 
+            {
+                if (user==null||user.Login != textBoxLogin.Text)
+                {
+                    if (textBoxPwd.Text == textBoxConfPwd.Text)
+                    {
+                        user = new User()
+                        {
+                            FName = textBoxFName.Text,
+                            LName = textBoxLname.Text,
+                            Login = textBoxLogin.Text,
+                            Password = textBoxPwd.Text,
+                            IsAdmin = checkBoxIsAdm.Checked
+                        };
+                        repUser = work.Repository<User>();
+                        repUser.Add(user);
+                        FillDatagreeds();
+                        textBoxFName.Text = "";
+                        textBoxLname.Text = "";
+                        textBoxLogin.Text = "";
+                        textBoxPwd.Text = "";
+                        textBoxConfPwd.Text = "";
+                        checkBoxIsAdm.Checked = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter corect pasword to confirm!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Such login is used, try another!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Fill all data of user!");
+            }
+            user = null;
+        }
+
+        private void dataGridEditU_MouseClick(object sender, MouseEventArgs e)
+        {
+            var id = dataGridEditU.SelectedRows[0].Cells[0].Value;
+            user = repUser.FindById(id);
+            textBoxEdFN.Text = user.FName;
+            textBoxEdLN.Text = user.LName;
+            textBoxELog.Text = user.Login;
+            textBoxEditPwd.Text = user.Password;
+            checkBoxEdIsAdm.Checked = user.IsAdmin;
+            buttonEditUser.Enabled = true;
+        }
+
+        private void buttonEditUser_Click(object sender, EventArgs e)
+        {
+           // User  tmp = repUser.FindAll(x => x.Login == textBoxELog.Text).Where(x=>x.Login!=user.Login).FirstOrDefault();
+            if (textBoxEdFN.Text != "" && textBoxEdLN.Text != "" && textBoxELog.Text != "" && textBoxEditPwd.Text != "" && textBoxEconfP.Text != "")
+            {
+                //if (tmp == null )
+                //{
+                    if (textBoxEditPwd.Text == textBoxEconfP.Text)
+                    {
+                    user.FName = textBoxEdFN.Text;
+                    user.LName = textBoxEdLN.Text;
+                    user.Login = textBoxELog.Text;
+                    user.Password = textBoxEditPwd.Text;
+                    user.IsAdmin = checkBoxEdIsAdm.Checked;
+                    repUser.Update(user);
+                    FillDatagreeds();
+                    textBoxEdFN.Text = "";
+                    textBoxEdLN.Text = "";
+                    textBoxELog.Text = "";
+                    textBoxEditPwd.Text = "";
+                    textBoxEconfP.Text = "";
+                    checkBoxEdIsAdm.Checked = false;
+                    buttonEditUser.Enabled = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Enter corect pasword to confirm!");
+                    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Such login is used, try another!");
+                //}
+            }
+            else
+            {
+                MessageBox.Show("Fill all data of user!");
+            }
+        }
+
+        private void dataGridDelUser_MouseClick(object sender, MouseEventArgs e)
+        {
+            var id = dataGridDelUser.SelectedRows[0].Cells[0].Value;
+            user = repUser.FindById(id);
+            buttonDelUser.Enabled = true;
+        }
+
+        private void buttonDelUser_Click(object sender, EventArgs e)
+        {
+            repUser.Remove(user);
+            FillDatagreeds();
+            buttonDelUser.Enabled = false;
         }
     }
 }

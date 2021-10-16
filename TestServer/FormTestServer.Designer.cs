@@ -31,6 +31,34 @@ namespace TestServer
         {
             this.tabMain = new System.Windows.Forms.TabControl();
             this.tabPageGroups = new System.Windows.Forms.TabPage();
+            this.tabGroups = new System.Windows.Forms.TabControl();
+            this.tabAllGroups = new System.Windows.Forms.TabPage();
+            this.dataGridAllGroups = new System.Windows.Forms.DataGridView();
+            this.tabAddG = new System.Windows.Forms.TabPage();
+            this.dataGridAddG = new System.Windows.Forms.DataGridView();
+            this.groupBoxAddGroup = new System.Windows.Forms.GroupBox();
+            this.buttonAddGroupe = new System.Windows.Forms.Button();
+            this.textBoxAddGroupe = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabEditG = new System.Windows.Forms.TabPage();
+            this.groupBoxEditGroup = new System.Windows.Forms.GroupBox();
+            this.buttonEditGroupe = new System.Windows.Forms.Button();
+            this.textBoxEditGroupe = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridEditG = new System.Windows.Forms.DataGridView();
+            this.tabDelG = new System.Windows.Forms.TabPage();
+            this.groupBoxDelGroupe = new System.Windows.Forms.GroupBox();
+            this.buttonDelGr = new System.Windows.Forms.Button();
+            this.textBoxDelGr = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridDelG = new System.Windows.Forms.DataGridView();
+            this.tabddDelUser = new System.Windows.Forms.TabPage();
+            this.buttonDelUserfromGr = new System.Windows.Forms.Button();
+            this.buttonAddUinG = new System.Windows.Forms.Button();
+            this.dataGridViewUforG = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUinG = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxAdUtoG = new System.Windows.Forms.ComboBox();
             this.tabPageUsers = new System.Windows.Forms.TabPage();
             this.tabUsers = new System.Windows.Forms.TabControl();
             this.tabPageAllU = new System.Windows.Forms.TabPage();
@@ -100,36 +128,23 @@ namespace TestServer
             this.label23 = new System.Windows.Forms.Label();
             this.buttonRefreshResult = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabddDelUser = new System.Windows.Forms.TabPage();
-            this.comboBoxAdUtoG = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridViewUinG = new System.Windows.Forms.DataGridView();
-            this.dataGridViewUforG = new System.Windows.Forms.DataGridView();
-            this.buttonAddUinG = new System.Windows.Forms.Button();
-            this.buttonDelUserfromGr = new System.Windows.Forms.Button();
-            this.tabDelG = new System.Windows.Forms.TabPage();
-            this.dataGridDelG = new System.Windows.Forms.DataGridView();
-            this.groupBoxDelGroupe = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxDelGr = new System.Windows.Forms.TextBox();
-            this.buttonDelGr = new System.Windows.Forms.Button();
-            this.tabEditG = new System.Windows.Forms.TabPage();
-            this.dataGridEditG = new System.Windows.Forms.DataGridView();
-            this.groupBoxEditGroup = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxEditGroupe = new System.Windows.Forms.TextBox();
-            this.buttonEditGroupe = new System.Windows.Forms.Button();
-            this.tabAddG = new System.Windows.Forms.TabPage();
-            this.groupBoxAddGroup = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxAddGroupe = new System.Windows.Forms.TextBox();
-            this.buttonAddGroupe = new System.Windows.Forms.Button();
-            this.dataGridAddG = new System.Windows.Forms.DataGridView();
-            this.tabAllGroups = new System.Windows.Forms.TabPage();
-            this.dataGridAllGroups = new System.Windows.Forms.DataGridView();
-            this.tabGroups = new System.Windows.Forms.TabControl();
             this.tabMain.SuspendLayout();
             this.tabPageGroups.SuspendLayout();
+            this.tabGroups.SuspendLayout();
+            this.tabAllGroups.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllGroups)).BeginInit();
+            this.tabAddG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddG)).BeginInit();
+            this.groupBoxAddGroup.SuspendLayout();
+            this.tabEditG.SuspendLayout();
+            this.groupBoxEditGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEditG)).BeginInit();
+            this.tabDelG.SuspendLayout();
+            this.groupBoxDelGroupe.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelG)).BeginInit();
+            this.tabddDelUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUforG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUinG)).BeginInit();
             this.tabPageUsers.SuspendLayout();
             this.tabUsers.SuspendLayout();
             this.tabPageAllU.SuspendLayout();
@@ -157,21 +172,6 @@ namespace TestServer
             ((System.ComponentModel.ISupportInitialize)(this.dataGridDeleteTest)).BeginInit();
             this.tabResults.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabddDelUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUinG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUforG)).BeginInit();
-            this.tabDelG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelG)).BeginInit();
-            this.groupBoxDelGroupe.SuspendLayout();
-            this.tabEditG.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEditG)).BeginInit();
-            this.groupBoxEditGroup.SuspendLayout();
-            this.tabAddG.SuspendLayout();
-            this.groupBoxAddGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddG)).BeginInit();
-            this.tabAllGroups.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllGroups)).BeginInit();
-            this.tabGroups.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabMain
@@ -201,6 +201,315 @@ namespace TestServer
             this.tabPageGroups.TabIndex = 0;
             this.tabPageGroups.Text = "Groups";
             this.tabPageGroups.UseVisualStyleBackColor = true;
+            // 
+            // tabGroups
+            // 
+            this.tabGroups.Controls.Add(this.tabAllGroups);
+            this.tabGroups.Controls.Add(this.tabAddG);
+            this.tabGroups.Controls.Add(this.tabEditG);
+            this.tabGroups.Controls.Add(this.tabDelG);
+            this.tabGroups.Controls.Add(this.tabddDelUser);
+            this.tabGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabGroups.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabGroups.Location = new System.Drawing.Point(3, 3);
+            this.tabGroups.Name = "tabGroups";
+            this.tabGroups.SelectedIndex = 0;
+            this.tabGroups.Size = new System.Drawing.Size(761, 357);
+            this.tabGroups.TabIndex = 0;
+            // 
+            // tabAllGroups
+            // 
+            this.tabAllGroups.Controls.Add(this.dataGridAllGroups);
+            this.tabAllGroups.Location = new System.Drawing.Point(4, 22);
+            this.tabAllGroups.Name = "tabAllGroups";
+            this.tabAllGroups.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAllGroups.Size = new System.Drawing.Size(753, 331);
+            this.tabAllGroups.TabIndex = 0;
+            this.tabAllGroups.Text = "All Groups";
+            this.tabAllGroups.UseVisualStyleBackColor = true;
+            // 
+            // dataGridAllGroups
+            // 
+            this.dataGridAllGroups.AllowUserToAddRows = false;
+            this.dataGridAllGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAllGroups.Location = new System.Drawing.Point(11, 11);
+            this.dataGridAllGroups.Name = "dataGridAllGroups";
+            this.dataGridAllGroups.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridAllGroups.Size = new System.Drawing.Size(736, 312);
+            this.dataGridAllGroups.TabIndex = 0;
+            // 
+            // tabAddG
+            // 
+            this.tabAddG.Controls.Add(this.dataGridAddG);
+            this.tabAddG.Controls.Add(this.groupBoxAddGroup);
+            this.tabAddG.Location = new System.Drawing.Point(4, 22);
+            this.tabAddG.Name = "tabAddG";
+            this.tabAddG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAddG.Size = new System.Drawing.Size(753, 331);
+            this.tabAddG.TabIndex = 1;
+            this.tabAddG.Text = "Add group";
+            this.tabAddG.UseVisualStyleBackColor = true;
+            // 
+            // dataGridAddG
+            // 
+            this.dataGridAddG.AllowUserToAddRows = false;
+            this.dataGridAddG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAddG.Location = new System.Drawing.Point(6, 6);
+            this.dataGridAddG.Name = "dataGridAddG";
+            this.dataGridAddG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridAddG.Size = new System.Drawing.Size(545, 317);
+            this.dataGridAddG.TabIndex = 6;
+            // 
+            // groupBoxAddGroup
+            // 
+            this.groupBoxAddGroup.Controls.Add(this.buttonAddGroupe);
+            this.groupBoxAddGroup.Controls.Add(this.textBoxAddGroupe);
+            this.groupBoxAddGroup.Controls.Add(this.label1);
+            this.groupBoxAddGroup.Location = new System.Drawing.Point(557, 6);
+            this.groupBoxAddGroup.Name = "groupBoxAddGroup";
+            this.groupBoxAddGroup.Size = new System.Drawing.Size(190, 317);
+            this.groupBoxAddGroup.TabIndex = 5;
+            this.groupBoxAddGroup.TabStop = false;
+            this.groupBoxAddGroup.Text = "Add Group";
+            // 
+            // buttonAddGroupe
+            // 
+            this.buttonAddGroupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonAddGroupe.Location = new System.Drawing.Point(23, 182);
+            this.buttonAddGroupe.Name = "buttonAddGroupe";
+            this.buttonAddGroupe.Size = new System.Drawing.Size(145, 39);
+            this.buttonAddGroupe.TabIndex = 2;
+            this.buttonAddGroupe.Text = "Add Groupe";
+            this.buttonAddGroupe.UseVisualStyleBackColor = true;
+            this.buttonAddGroupe.Click += new System.EventHandler(this.buttonAddGroupe_Click);
+            // 
+            // textBoxAddGroupe
+            // 
+            this.textBoxAddGroupe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxAddGroupe.Location = new System.Drawing.Point(23, 99);
+            this.textBoxAddGroupe.Name = "textBoxAddGroupe";
+            this.textBoxAddGroupe.Size = new System.Drawing.Size(145, 29);
+            this.textBoxAddGroupe.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(30, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(129, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Group Name";
+            // 
+            // tabEditG
+            // 
+            this.tabEditG.Controls.Add(this.groupBoxEditGroup);
+            this.tabEditG.Controls.Add(this.dataGridEditG);
+            this.tabEditG.Location = new System.Drawing.Point(4, 22);
+            this.tabEditG.Name = "tabEditG";
+            this.tabEditG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEditG.Size = new System.Drawing.Size(753, 331);
+            this.tabEditG.TabIndex = 2;
+            this.tabEditG.Text = "Edit group";
+            this.tabEditG.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxEditGroup
+            // 
+            this.groupBoxEditGroup.Controls.Add(this.buttonEditGroupe);
+            this.groupBoxEditGroup.Controls.Add(this.textBoxEditGroupe);
+            this.groupBoxEditGroup.Controls.Add(this.label2);
+            this.groupBoxEditGroup.Location = new System.Drawing.Point(563, 6);
+            this.groupBoxEditGroup.Name = "groupBoxEditGroup";
+            this.groupBoxEditGroup.Size = new System.Drawing.Size(187, 317);
+            this.groupBoxEditGroup.TabIndex = 9;
+            this.groupBoxEditGroup.TabStop = false;
+            this.groupBoxEditGroup.Text = "Edit Group";
+            // 
+            // buttonEditGroupe
+            // 
+            this.buttonEditGroupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonEditGroupe.Location = new System.Drawing.Point(25, 243);
+            this.buttonEditGroupe.Name = "buttonEditGroupe";
+            this.buttonEditGroupe.Size = new System.Drawing.Size(145, 39);
+            this.buttonEditGroupe.TabIndex = 2;
+            this.buttonEditGroupe.Text = "Edit Groupe";
+            this.buttonEditGroupe.UseVisualStyleBackColor = true;
+            this.buttonEditGroupe.Click += new System.EventHandler(this.buttonEditGroupe_Click);
+            // 
+            // textBoxEditGroupe
+            // 
+            this.textBoxEditGroupe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxEditGroupe.Location = new System.Drawing.Point(25, 181);
+            this.textBoxEditGroupe.Name = "textBoxEditGroupe";
+            this.textBoxEditGroupe.Size = new System.Drawing.Size(145, 29);
+            this.textBoxEditGroupe.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(38, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Group Name";
+            // 
+            // dataGridEditG
+            // 
+            this.dataGridEditG.AllowUserToAddRows = false;
+            this.dataGridEditG.AllowUserToOrderColumns = true;
+            this.dataGridEditG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridEditG.Location = new System.Drawing.Point(6, 6);
+            this.dataGridEditG.Name = "dataGridEditG";
+            this.dataGridEditG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridEditG.Size = new System.Drawing.Size(551, 317);
+            this.dataGridEditG.TabIndex = 7;
+            this.dataGridEditG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridEditG_MouseClick);
+            // 
+            // tabDelG
+            // 
+            this.tabDelG.Controls.Add(this.groupBoxDelGroupe);
+            this.tabDelG.Controls.Add(this.dataGridDelG);
+            this.tabDelG.Location = new System.Drawing.Point(4, 22);
+            this.tabDelG.Name = "tabDelG";
+            this.tabDelG.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDelG.Size = new System.Drawing.Size(753, 331);
+            this.tabDelG.TabIndex = 3;
+            this.tabDelG.Text = "Delete group";
+            this.tabDelG.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxDelGroupe
+            // 
+            this.groupBoxDelGroupe.Controls.Add(this.buttonDelGr);
+            this.groupBoxDelGroupe.Controls.Add(this.textBoxDelGr);
+            this.groupBoxDelGroupe.Controls.Add(this.label5);
+            this.groupBoxDelGroupe.Location = new System.Drawing.Point(563, 6);
+            this.groupBoxDelGroupe.Name = "groupBoxDelGroupe";
+            this.groupBoxDelGroupe.Size = new System.Drawing.Size(187, 317);
+            this.groupBoxDelGroupe.TabIndex = 9;
+            this.groupBoxDelGroupe.TabStop = false;
+            this.groupBoxDelGroupe.Text = "Delete Group";
+            // 
+            // buttonDelGr
+            // 
+            this.buttonDelGr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelGr.Location = new System.Drawing.Point(25, 243);
+            this.buttonDelGr.Name = "buttonDelGr";
+            this.buttonDelGr.Size = new System.Drawing.Size(145, 39);
+            this.buttonDelGr.TabIndex = 2;
+            this.buttonDelGr.Text = "Delete Groupe";
+            this.buttonDelGr.UseVisualStyleBackColor = true;
+            this.buttonDelGr.Click += new System.EventHandler(this.buttonDelGr_Click);
+            // 
+            // textBoxDelGr
+            // 
+            this.textBoxDelGr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxDelGr.Location = new System.Drawing.Point(25, 181);
+            this.textBoxDelGr.Name = "textBoxDelGr";
+            this.textBoxDelGr.Size = new System.Drawing.Size(145, 29);
+            this.textBoxDelGr.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(38, 140);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Group Name";
+            // 
+            // dataGridDelG
+            // 
+            this.dataGridDelG.AllowUserToAddRows = false;
+            this.dataGridDelG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridDelG.Location = new System.Drawing.Point(6, 6);
+            this.dataGridDelG.Name = "dataGridDelG";
+            this.dataGridDelG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridDelG.Size = new System.Drawing.Size(551, 317);
+            this.dataGridDelG.TabIndex = 8;
+            this.dataGridDelG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridDelG_MouseClick);
+            // 
+            // tabddDelUser
+            // 
+            this.tabddDelUser.Controls.Add(this.buttonDelUserfromGr);
+            this.tabddDelUser.Controls.Add(this.buttonAddUinG);
+            this.tabddDelUser.Controls.Add(this.dataGridViewUforG);
+            this.tabddDelUser.Controls.Add(this.dataGridViewUinG);
+            this.tabddDelUser.Controls.Add(this.label6);
+            this.tabddDelUser.Controls.Add(this.comboBoxAdUtoG);
+            this.tabddDelUser.Location = new System.Drawing.Point(4, 22);
+            this.tabddDelUser.Name = "tabddDelUser";
+            this.tabddDelUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tabddDelUser.Size = new System.Drawing.Size(753, 331);
+            this.tabddDelUser.TabIndex = 4;
+            this.tabddDelUser.Text = "Add/Delete user";
+            this.tabddDelUser.UseVisualStyleBackColor = true;
+            // 
+            // buttonDelUserfromGr
+            // 
+            this.buttonDelUserfromGr.Enabled = false;
+            this.buttonDelUserfromGr.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelUserfromGr.Location = new System.Drawing.Point(382, 291);
+            this.buttonDelUserfromGr.Name = "buttonDelUserfromGr";
+            this.buttonDelUserfromGr.Size = new System.Drawing.Size(365, 34);
+            this.buttonDelUserfromGr.TabIndex = 5;
+            this.buttonDelUserfromGr.Text = "Delete User from Group";
+            this.buttonDelUserfromGr.UseVisualStyleBackColor = true;
+            this.buttonDelUserfromGr.Click += new System.EventHandler(this.buttonDelUserfromGr_Click);
+            // 
+            // buttonAddUinG
+            // 
+            this.buttonAddUinG.Enabled = false;
+            this.buttonAddUinG.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddUinG.Location = new System.Drawing.Point(6, 291);
+            this.buttonAddUinG.Name = "buttonAddUinG";
+            this.buttonAddUinG.Size = new System.Drawing.Size(365, 34);
+            this.buttonAddUinG.TabIndex = 4;
+            this.buttonAddUinG.Text = "Add User in Group";
+            this.buttonAddUinG.UseVisualStyleBackColor = true;
+            this.buttonAddUinG.Click += new System.EventHandler(this.buttonAddUinG_Click);
+            // 
+            // dataGridViewUforG
+            // 
+            this.dataGridViewUforG.AllowUserToAddRows = false;
+            this.dataGridViewUforG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUforG.Location = new System.Drawing.Point(6, 167);
+            this.dataGridViewUforG.Name = "dataGridViewUforG";
+            this.dataGridViewUforG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewUforG.Size = new System.Drawing.Size(741, 118);
+            this.dataGridViewUforG.TabIndex = 3;
+            this.dataGridViewUforG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUforG_MouseClick);
+            // 
+            // dataGridViewUinG
+            // 
+            this.dataGridViewUinG.AllowUserToAddRows = false;
+            this.dataGridViewUinG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewUinG.Location = new System.Drawing.Point(9, 33);
+            this.dataGridViewUinG.Name = "dataGridViewUinG";
+            this.dataGridViewUinG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewUinG.Size = new System.Drawing.Size(741, 128);
+            this.dataGridViewUinG.TabIndex = 2;
+            this.dataGridViewUinG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUinG_MouseClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(455, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 16);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Groups:";
+            // 
+            // comboBoxAdUtoG
+            // 
+            this.comboBoxAdUtoG.FormattingEnabled = true;
+            this.comboBoxAdUtoG.Location = new System.Drawing.Point(526, 6);
+            this.comboBoxAdUtoG.Name = "comboBoxAdUtoG";
+            this.comboBoxAdUtoG.Size = new System.Drawing.Size(221, 21);
+            this.comboBoxAdUtoG.TabIndex = 0;
+            this.comboBoxAdUtoG.SelectedIndexChanged += new System.EventHandler(this.comboBoxAdUtoG_SelectedIndexChanged);
             // 
             // tabPageUsers
             // 
@@ -239,9 +548,11 @@ namespace TestServer
             // 
             // dataGridAllU
             // 
+            this.dataGridAllU.AllowUserToAddRows = false;
             this.dataGridAllU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAllU.Location = new System.Drawing.Point(3, 3);
             this.dataGridAllU.Name = "dataGridAllU";
+            this.dataGridAllU.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridAllU.Size = new System.Drawing.Size(747, 325);
             this.dataGridAllU.TabIndex = 0;
             // 
@@ -258,9 +569,11 @@ namespace TestServer
             // 
             // dataGridViewAddU
             // 
+            this.dataGridViewAddU.AllowUserToAddRows = false;
             this.dataGridViewAddU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAddU.Location = new System.Drawing.Point(3, 3);
             this.dataGridViewAddU.Name = "dataGridViewAddU";
+            this.dataGridViewAddU.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAddU.Size = new System.Drawing.Size(448, 325);
             this.dataGridViewAddU.TabIndex = 1;
             // 
@@ -294,6 +607,7 @@ namespace TestServer
             this.buttonAddU.TabIndex = 11;
             this.buttonAddU.Text = "Add User";
             this.buttonAddU.UseVisualStyleBackColor = true;
+            this.buttonAddU.Click += new System.EventHandler(this.buttonAddU_Click);
             // 
             // checkBoxIsAdm
             // 
@@ -405,11 +719,14 @@ namespace TestServer
             // 
             // dataGridEditU
             // 
+            this.dataGridEditU.AllowUserToAddRows = false;
             this.dataGridEditU.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridEditU.Location = new System.Drawing.Point(3, 3);
             this.dataGridEditU.Name = "dataGridEditU";
+            this.dataGridEditU.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridEditU.Size = new System.Drawing.Size(448, 325);
             this.dataGridEditU.TabIndex = 3;
+            this.dataGridEditU.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridEditU_MouseClick);
             // 
             // groupBoxEditU
             // 
@@ -434,6 +751,7 @@ namespace TestServer
             // 
             // buttonEditUser
             // 
+            this.buttonEditUser.Enabled = false;
             this.buttonEditUser.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEditUser.Location = new System.Drawing.Point(122, 274);
             this.buttonEditUser.Name = "buttonEditUser";
@@ -441,6 +759,7 @@ namespace TestServer
             this.buttonEditUser.TabIndex = 11;
             this.buttonEditUser.Text = "Edit User";
             this.buttonEditUser.UseVisualStyleBackColor = true;
+            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
             // 
             // checkBoxEdIsAdm
             // 
@@ -553,6 +872,7 @@ namespace TestServer
             // 
             // buttonDelUser
             // 
+            this.buttonDelUser.Enabled = false;
             this.buttonDelUser.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelUser.Location = new System.Drawing.Point(6, 283);
             this.buttonDelUser.Name = "buttonDelUser";
@@ -560,14 +880,18 @@ namespace TestServer
             this.buttonDelUser.TabIndex = 1;
             this.buttonDelUser.Text = "Delete User";
             this.buttonDelUser.UseVisualStyleBackColor = true;
+            this.buttonDelUser.Click += new System.EventHandler(this.buttonDelUser_Click);
             // 
             // dataGridDelUser
             // 
+            this.dataGridDelUser.AllowUserToAddRows = false;
             this.dataGridDelUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDelUser.Location = new System.Drawing.Point(6, 6);
             this.dataGridDelUser.Name = "dataGridDelUser";
+            this.dataGridDelUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDelUser.Size = new System.Drawing.Size(741, 271);
             this.dataGridDelUser.TabIndex = 0;
+            this.dataGridDelUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridDelUser_MouseClick);
             // 
             // tabTests
             // 
@@ -893,316 +1217,6 @@ namespace TestServer
             this.dataGridView1.Size = new System.Drawing.Size(755, 269);
             this.dataGridView1.TabIndex = 15;
             // 
-            // tabddDelUser
-            // 
-            this.tabddDelUser.Controls.Add(this.buttonDelUserfromGr);
-            this.tabddDelUser.Controls.Add(this.buttonAddUinG);
-            this.tabddDelUser.Controls.Add(this.dataGridViewUforG);
-            this.tabddDelUser.Controls.Add(this.dataGridViewUinG);
-            this.tabddDelUser.Controls.Add(this.label6);
-            this.tabddDelUser.Controls.Add(this.comboBoxAdUtoG);
-            this.tabddDelUser.Location = new System.Drawing.Point(4, 22);
-            this.tabddDelUser.Name = "tabddDelUser";
-            this.tabddDelUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tabddDelUser.Size = new System.Drawing.Size(753, 331);
-            this.tabddDelUser.TabIndex = 4;
-            this.tabddDelUser.Text = "Add/Delete user";
-            this.tabddDelUser.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxAdUtoG
-            // 
-            this.comboBoxAdUtoG.FormattingEnabled = true;
-            this.comboBoxAdUtoG.Location = new System.Drawing.Point(526, 6);
-            this.comboBoxAdUtoG.Name = "comboBoxAdUtoG";
-            this.comboBoxAdUtoG.Size = new System.Drawing.Size(221, 21);
-            this.comboBoxAdUtoG.TabIndex = 0;
-            this.comboBoxAdUtoG.SelectedIndexChanged += new System.EventHandler(this.comboBoxAdUtoG_SelectedIndexChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(455, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 16);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Groups:";
-            // 
-            // dataGridViewUinG
-            // 
-            this.dataGridViewUinG.AllowUserToAddRows = false;
-            this.dataGridViewUinG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUinG.Location = new System.Drawing.Point(9, 33);
-            this.dataGridViewUinG.Name = "dataGridViewUinG";
-            this.dataGridViewUinG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUinG.Size = new System.Drawing.Size(741, 128);
-            this.dataGridViewUinG.TabIndex = 2;
-            this.dataGridViewUinG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUinG_MouseClick);
-            // 
-            // dataGridViewUforG
-            // 
-            this.dataGridViewUforG.AllowUserToAddRows = false;
-            this.dataGridViewUforG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewUforG.Location = new System.Drawing.Point(6, 167);
-            this.dataGridViewUforG.Name = "dataGridViewUforG";
-            this.dataGridViewUforG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUforG.Size = new System.Drawing.Size(741, 118);
-            this.dataGridViewUforG.TabIndex = 3;
-            this.dataGridViewUforG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewUforG_MouseClick);
-            // 
-            // buttonAddUinG
-            // 
-            this.buttonAddUinG.Enabled = false;
-            this.buttonAddUinG.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUinG.Location = new System.Drawing.Point(6, 291);
-            this.buttonAddUinG.Name = "buttonAddUinG";
-            this.buttonAddUinG.Size = new System.Drawing.Size(365, 34);
-            this.buttonAddUinG.TabIndex = 4;
-            this.buttonAddUinG.Text = "Add User in Group";
-            this.buttonAddUinG.UseVisualStyleBackColor = true;
-            this.buttonAddUinG.Click += new System.EventHandler(this.buttonAddUinG_Click);
-            // 
-            // buttonDelUserfromGr
-            // 
-            this.buttonDelUserfromGr.Enabled = false;
-            this.buttonDelUserfromGr.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelUserfromGr.Location = new System.Drawing.Point(382, 291);
-            this.buttonDelUserfromGr.Name = "buttonDelUserfromGr";
-            this.buttonDelUserfromGr.Size = new System.Drawing.Size(365, 34);
-            this.buttonDelUserfromGr.TabIndex = 5;
-            this.buttonDelUserfromGr.Text = "Delete User from Group";
-            this.buttonDelUserfromGr.UseVisualStyleBackColor = true;
-            this.buttonDelUserfromGr.Click += new System.EventHandler(this.buttonDelUserfromGr_Click);
-            // 
-            // tabDelG
-            // 
-            this.tabDelG.Controls.Add(this.groupBoxDelGroupe);
-            this.tabDelG.Controls.Add(this.dataGridDelG);
-            this.tabDelG.Location = new System.Drawing.Point(4, 22);
-            this.tabDelG.Name = "tabDelG";
-            this.tabDelG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDelG.Size = new System.Drawing.Size(753, 331);
-            this.tabDelG.TabIndex = 3;
-            this.tabDelG.Text = "Delete group";
-            this.tabDelG.UseVisualStyleBackColor = true;
-            // 
-            // dataGridDelG
-            // 
-            this.dataGridDelG.AllowUserToAddRows = false;
-            this.dataGridDelG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridDelG.Location = new System.Drawing.Point(6, 6);
-            this.dataGridDelG.Name = "dataGridDelG";
-            this.dataGridDelG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridDelG.Size = new System.Drawing.Size(551, 317);
-            this.dataGridDelG.TabIndex = 8;
-            this.dataGridDelG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridDelG_MouseClick);
-            // 
-            // groupBoxDelGroupe
-            // 
-            this.groupBoxDelGroupe.Controls.Add(this.buttonDelGr);
-            this.groupBoxDelGroupe.Controls.Add(this.textBoxDelGr);
-            this.groupBoxDelGroupe.Controls.Add(this.label5);
-            this.groupBoxDelGroupe.Location = new System.Drawing.Point(563, 6);
-            this.groupBoxDelGroupe.Name = "groupBoxDelGroupe";
-            this.groupBoxDelGroupe.Size = new System.Drawing.Size(187, 317);
-            this.groupBoxDelGroupe.TabIndex = 9;
-            this.groupBoxDelGroupe.TabStop = false;
-            this.groupBoxDelGroupe.Text = "Delete Group";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(38, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 24);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Group Name";
-            // 
-            // textBoxDelGr
-            // 
-            this.textBoxDelGr.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDelGr.Location = new System.Drawing.Point(25, 181);
-            this.textBoxDelGr.Name = "textBoxDelGr";
-            this.textBoxDelGr.Size = new System.Drawing.Size(145, 29);
-            this.textBoxDelGr.TabIndex = 1;
-            // 
-            // buttonDelGr
-            // 
-            this.buttonDelGr.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelGr.Location = new System.Drawing.Point(25, 243);
-            this.buttonDelGr.Name = "buttonDelGr";
-            this.buttonDelGr.Size = new System.Drawing.Size(145, 39);
-            this.buttonDelGr.TabIndex = 2;
-            this.buttonDelGr.Text = "Delete Groupe";
-            this.buttonDelGr.UseVisualStyleBackColor = true;
-            this.buttonDelGr.Click += new System.EventHandler(this.buttonDelGr_Click);
-            // 
-            // tabEditG
-            // 
-            this.tabEditG.Controls.Add(this.groupBoxEditGroup);
-            this.tabEditG.Controls.Add(this.dataGridEditG);
-            this.tabEditG.Location = new System.Drawing.Point(4, 22);
-            this.tabEditG.Name = "tabEditG";
-            this.tabEditG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabEditG.Size = new System.Drawing.Size(753, 331);
-            this.tabEditG.TabIndex = 2;
-            this.tabEditG.Text = "Edit group";
-            this.tabEditG.UseVisualStyleBackColor = true;
-            // 
-            // dataGridEditG
-            // 
-            this.dataGridEditG.AllowUserToAddRows = false;
-            this.dataGridEditG.AllowUserToOrderColumns = true;
-            this.dataGridEditG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEditG.Location = new System.Drawing.Point(6, 6);
-            this.dataGridEditG.Name = "dataGridEditG";
-            this.dataGridEditG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridEditG.Size = new System.Drawing.Size(551, 317);
-            this.dataGridEditG.TabIndex = 7;
-            this.dataGridEditG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridEditG_MouseClick);
-            // 
-            // groupBoxEditGroup
-            // 
-            this.groupBoxEditGroup.Controls.Add(this.buttonEditGroupe);
-            this.groupBoxEditGroup.Controls.Add(this.textBoxEditGroupe);
-            this.groupBoxEditGroup.Controls.Add(this.label2);
-            this.groupBoxEditGroup.Location = new System.Drawing.Point(563, 6);
-            this.groupBoxEditGroup.Name = "groupBoxEditGroup";
-            this.groupBoxEditGroup.Size = new System.Drawing.Size(187, 317);
-            this.groupBoxEditGroup.TabIndex = 9;
-            this.groupBoxEditGroup.TabStop = false;
-            this.groupBoxEditGroup.Text = "Edit Group";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(38, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Group Name";
-            // 
-            // textBoxEditGroupe
-            // 
-            this.textBoxEditGroupe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxEditGroupe.Location = new System.Drawing.Point(25, 181);
-            this.textBoxEditGroupe.Name = "textBoxEditGroupe";
-            this.textBoxEditGroupe.Size = new System.Drawing.Size(145, 29);
-            this.textBoxEditGroupe.TabIndex = 1;
-            this.textBoxEditGroupe.TextChanged += new System.EventHandler(this.textBoxEditGroupe_TextChanged);
-            // 
-            // buttonEditGroupe
-            // 
-            this.buttonEditGroupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonEditGroupe.Location = new System.Drawing.Point(25, 243);
-            this.buttonEditGroupe.Name = "buttonEditGroupe";
-            this.buttonEditGroupe.Size = new System.Drawing.Size(145, 39);
-            this.buttonEditGroupe.TabIndex = 2;
-            this.buttonEditGroupe.Text = "Edit Groupe";
-            this.buttonEditGroupe.UseVisualStyleBackColor = true;
-            this.buttonEditGroupe.Click += new System.EventHandler(this.buttonEditGroupe_Click);
-            // 
-            // tabAddG
-            // 
-            this.tabAddG.Controls.Add(this.dataGridAddG);
-            this.tabAddG.Controls.Add(this.groupBoxAddGroup);
-            this.tabAddG.Location = new System.Drawing.Point(4, 22);
-            this.tabAddG.Name = "tabAddG";
-            this.tabAddG.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAddG.Size = new System.Drawing.Size(753, 331);
-            this.tabAddG.TabIndex = 1;
-            this.tabAddG.Text = "Add group";
-            this.tabAddG.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxAddGroup
-            // 
-            this.groupBoxAddGroup.Controls.Add(this.buttonAddGroupe);
-            this.groupBoxAddGroup.Controls.Add(this.textBoxAddGroupe);
-            this.groupBoxAddGroup.Controls.Add(this.label1);
-            this.groupBoxAddGroup.Location = new System.Drawing.Point(557, 6);
-            this.groupBoxAddGroup.Name = "groupBoxAddGroup";
-            this.groupBoxAddGroup.Size = new System.Drawing.Size(190, 317);
-            this.groupBoxAddGroup.TabIndex = 5;
-            this.groupBoxAddGroup.TabStop = false;
-            this.groupBoxAddGroup.Text = "Add Group";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(30, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Group Name";
-            // 
-            // textBoxAddGroupe
-            // 
-            this.textBoxAddGroupe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAddGroupe.Location = new System.Drawing.Point(23, 99);
-            this.textBoxAddGroupe.Name = "textBoxAddGroupe";
-            this.textBoxAddGroupe.Size = new System.Drawing.Size(145, 29);
-            this.textBoxAddGroupe.TabIndex = 1;
-            // 
-            // buttonAddGroupe
-            // 
-            this.buttonAddGroupe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonAddGroupe.Location = new System.Drawing.Point(23, 182);
-            this.buttonAddGroupe.Name = "buttonAddGroupe";
-            this.buttonAddGroupe.Size = new System.Drawing.Size(145, 39);
-            this.buttonAddGroupe.TabIndex = 2;
-            this.buttonAddGroupe.Text = "Add Groupe";
-            this.buttonAddGroupe.UseVisualStyleBackColor = true;
-            this.buttonAddGroupe.Click += new System.EventHandler(this.buttonAddGroupe_Click);
-            // 
-            // dataGridAddG
-            // 
-            this.dataGridAddG.AllowUserToAddRows = false;
-            this.dataGridAddG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAddG.Location = new System.Drawing.Point(6, 6);
-            this.dataGridAddG.Name = "dataGridAddG";
-            this.dataGridAddG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridAddG.Size = new System.Drawing.Size(545, 317);
-            this.dataGridAddG.TabIndex = 6;
-            // 
-            // tabAllGroups
-            // 
-            this.tabAllGroups.Controls.Add(this.dataGridAllGroups);
-            this.tabAllGroups.Location = new System.Drawing.Point(4, 22);
-            this.tabAllGroups.Name = "tabAllGroups";
-            this.tabAllGroups.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAllGroups.Size = new System.Drawing.Size(753, 331);
-            this.tabAllGroups.TabIndex = 0;
-            this.tabAllGroups.Text = "All Groups";
-            this.tabAllGroups.UseVisualStyleBackColor = true;
-            // 
-            // dataGridAllGroups
-            // 
-            this.dataGridAllGroups.AllowUserToAddRows = false;
-            this.dataGridAllGroups.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridAllGroups.Location = new System.Drawing.Point(11, 11);
-            this.dataGridAllGroups.Name = "dataGridAllGroups";
-            this.dataGridAllGroups.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridAllGroups.Size = new System.Drawing.Size(736, 312);
-            this.dataGridAllGroups.TabIndex = 0;
-            // 
-            // tabGroups
-            // 
-            this.tabGroups.Controls.Add(this.tabAllGroups);
-            this.tabGroups.Controls.Add(this.tabAddG);
-            this.tabGroups.Controls.Add(this.tabEditG);
-            this.tabGroups.Controls.Add(this.tabDelG);
-            this.tabGroups.Controls.Add(this.tabddDelUser);
-            this.tabGroups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabGroups.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabGroups.Location = new System.Drawing.Point(3, 3);
-            this.tabGroups.Name = "tabGroups";
-            this.tabGroups.SelectedIndex = 0;
-            this.tabGroups.Size = new System.Drawing.Size(761, 357);
-            this.tabGroups.TabIndex = 0;
-            // 
             // FormTestServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1213,6 +1227,25 @@ namespace TestServer
             this.Text = "FormTestServer";
             this.tabMain.ResumeLayout(false);
             this.tabPageGroups.ResumeLayout(false);
+            this.tabGroups.ResumeLayout(false);
+            this.tabAllGroups.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllGroups)).EndInit();
+            this.tabAddG.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddG)).EndInit();
+            this.groupBoxAddGroup.ResumeLayout(false);
+            this.groupBoxAddGroup.PerformLayout();
+            this.tabEditG.ResumeLayout(false);
+            this.groupBoxEditGroup.ResumeLayout(false);
+            this.groupBoxEditGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridEditG)).EndInit();
+            this.tabDelG.ResumeLayout(false);
+            this.groupBoxDelGroupe.ResumeLayout(false);
+            this.groupBoxDelGroupe.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelG)).EndInit();
+            this.tabddDelUser.ResumeLayout(false);
+            this.tabddDelUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUforG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUinG)).EndInit();
             this.tabPageUsers.ResumeLayout(false);
             this.tabUsers.ResumeLayout(false);
             this.tabPageAllU.ResumeLayout(false);
@@ -1246,25 +1279,6 @@ namespace TestServer
             this.tabResults.ResumeLayout(false);
             this.tabResults.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabddDelUser.ResumeLayout(false);
-            this.tabddDelUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUinG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUforG)).EndInit();
-            this.tabDelG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridDelG)).EndInit();
-            this.groupBoxDelGroupe.ResumeLayout(false);
-            this.groupBoxDelGroupe.PerformLayout();
-            this.tabEditG.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEditG)).EndInit();
-            this.groupBoxEditGroup.ResumeLayout(false);
-            this.groupBoxEditGroup.PerformLayout();
-            this.tabAddG.ResumeLayout(false);
-            this.groupBoxAddGroup.ResumeLayout(false);
-            this.groupBoxAddGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAddG)).EndInit();
-            this.tabAllGroups.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridAllGroups)).EndInit();
-            this.tabGroups.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

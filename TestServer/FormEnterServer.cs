@@ -32,11 +32,6 @@ namespace TestServer
             {
                 textBoxLogin.Text = null;
                 textBoxPassWord.Text = null;
-                //this.Close();
-                //Application.Run(new Form1(tmpUser));
-                //Form1 form1 = new Form1(tmpUser);
-                //form1.ShowDialog();
-                //this.Close();
                 FormTestServer formTestServer = new FormTestServer(tmpUser);
                 formTestServer.ShowDialog();
             }
