@@ -118,6 +118,10 @@
       <Project>{04f180fd-8a69-4463-8d80-e851c40e8331}</Project>
       <Name>Repository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TestDesignerDLL\TestDesignerDLL.csproj">
+      <Project>{5B593354-83F7-43C1-BE7F-1CA3035EF87C}</Project>
+      <Name>TestDesignerDLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

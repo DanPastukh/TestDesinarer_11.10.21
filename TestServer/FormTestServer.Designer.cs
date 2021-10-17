@@ -100,7 +100,7 @@ namespace TestServer
             this.tabTasts = new System.Windows.Forms.TabControl();
             this.tabPageLoadT = new System.Windows.Forms.TabPage();
             this.buttonOpenTest = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxTests = new System.Windows.Forms.GroupBox();
             this.buttonCancelTest = new System.Windows.Forms.Button();
             this.buttonSaveT = new System.Windows.Forms.Button();
             this.textBoxQuestions = new System.Windows.Forms.TextBox();
@@ -128,6 +128,7 @@ namespace TestServer
             this.label23 = new System.Windows.Forms.Label();
             this.buttonRefreshResult = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.openFileDialogTests = new System.Windows.Forms.OpenFileDialog();
             this.tabMain.SuspendLayout();
             this.tabPageGroups.SuspendLayout();
             this.tabGroups.SuspendLayout();
@@ -160,7 +161,7 @@ namespace TestServer
             this.tabTests.SuspendLayout();
             this.tabTasts.SuspendLayout();
             this.tabPageLoadT.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxTests.SuspendLayout();
             this.tabPageAllT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTests)).BeginInit();
             this.tabPageAssT.SuspendLayout();
@@ -922,7 +923,7 @@ namespace TestServer
             // tabPageLoadT
             // 
             this.tabPageLoadT.Controls.Add(this.buttonOpenTest);
-            this.tabPageLoadT.Controls.Add(this.groupBox1);
+            this.tabPageLoadT.Controls.Add(this.groupBoxTests);
             this.tabPageLoadT.Location = new System.Drawing.Point(4, 22);
             this.tabPageLoadT.Name = "tabPageLoadT";
             this.tabPageLoadT.Padding = new System.Windows.Forms.Padding(3);
@@ -940,23 +941,24 @@ namespace TestServer
             this.buttonOpenTest.TabIndex = 7;
             this.buttonOpenTest.Text = "Open Test";
             this.buttonOpenTest.UseVisualStyleBackColor = true;
+            this.buttonOpenTest.Click += new System.EventHandler(this.buttonOpenTest_Click);
             // 
-            // groupBox1
+            // groupBoxTests
             // 
-            this.groupBox1.Controls.Add(this.buttonCancelTest);
-            this.groupBox1.Controls.Add(this.buttonSaveT);
-            this.groupBox1.Controls.Add(this.textBoxQuestions);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.textBoxTitleTest);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.textBoxAuthor);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Location = new System.Drawing.Point(331, 17);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(387, 301);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBoxTests.Controls.Add(this.buttonCancelTest);
+            this.groupBoxTests.Controls.Add(this.buttonSaveT);
+            this.groupBoxTests.Controls.Add(this.textBoxQuestions);
+            this.groupBoxTests.Controls.Add(this.label20);
+            this.groupBoxTests.Controls.Add(this.textBoxTitleTest);
+            this.groupBoxTests.Controls.Add(this.label19);
+            this.groupBoxTests.Controls.Add(this.textBoxAuthor);
+            this.groupBoxTests.Controls.Add(this.label18);
+            this.groupBoxTests.Location = new System.Drawing.Point(331, 17);
+            this.groupBoxTests.Name = "groupBoxTests";
+            this.groupBoxTests.Size = new System.Drawing.Size(387, 301);
+            this.groupBoxTests.TabIndex = 0;
+            this.groupBoxTests.TabStop = false;
+            this.groupBoxTests.Text = "Test";
             // 
             // buttonCancelTest
             // 
@@ -967,6 +969,7 @@ namespace TestServer
             this.buttonCancelTest.TabIndex = 7;
             this.buttonCancelTest.Text = "Cancel";
             this.buttonCancelTest.UseVisualStyleBackColor = true;
+            this.buttonCancelTest.Click += new System.EventHandler(this.buttonCancelTest_Click);
             // 
             // buttonSaveT
             // 
@@ -977,6 +980,7 @@ namespace TestServer
             this.buttonSaveT.TabIndex = 6;
             this.buttonSaveT.Text = "Save";
             this.buttonSaveT.UseVisualStyleBackColor = true;
+            this.buttonSaveT.Click += new System.EventHandler(this.buttonSaveT_Click);
             // 
             // textBoxQuestions
             // 
@@ -1042,9 +1046,11 @@ namespace TestServer
             // 
             // dataGridTests
             // 
+            this.dataGridTests.AllowUserToAddRows = false;
             this.dataGridTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTests.Location = new System.Drawing.Point(6, 11);
             this.dataGridTests.Name = "dataGridTests";
+            this.dataGridTests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTests.Size = new System.Drawing.Size(741, 314);
             this.dataGridTests.TabIndex = 0;
             // 
@@ -1072,20 +1078,26 @@ namespace TestServer
             this.buttonAssTestToG.TabIndex = 9;
             this.buttonAssTestToG.Text = " Assigne Test to Group";
             this.buttonAssTestToG.UseVisualStyleBackColor = true;
+            this.buttonAssTestToG.Click += new System.EventHandler(this.buttonAssTestToG_Click);
             // 
             // dataGridViewTestAssG
             // 
+            this.dataGridViewTestAssG.AllowUserToAddRows = false;
             this.dataGridViewTestAssG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTestAssG.Location = new System.Drawing.Point(4, 167);
             this.dataGridViewTestAssG.Name = "dataGridViewTestAssG";
+            this.dataGridViewTestAssG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTestAssG.Size = new System.Drawing.Size(741, 118);
             this.dataGridViewTestAssG.TabIndex = 8;
+            this.dataGridViewTestAssG.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridViewTestAssG_MouseClick);
             // 
             // dataGridViewGroupsTests
             // 
+            this.dataGridViewGroupsTests.AllowUserToAddRows = false;
             this.dataGridViewGroupsTests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroupsTests.Location = new System.Drawing.Point(7, 33);
             this.dataGridViewGroupsTests.Name = "dataGridViewGroupsTests";
+            this.dataGridViewGroupsTests.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewGroupsTests.Size = new System.Drawing.Size(741, 128);
             this.dataGridViewGroupsTests.TabIndex = 7;
             // 
@@ -1106,6 +1118,7 @@ namespace TestServer
             this.comboBoxAssG.Name = "comboBoxAssG";
             this.comboBoxAssG.Size = new System.Drawing.Size(221, 21);
             this.comboBoxAssG.TabIndex = 5;
+            this.comboBoxAssG.SelectedIndexChanged += new System.EventHandler(this.comboBoxAssG_SelectedIndexChanged);
             // 
             // tabPageTestOfG
             // 
@@ -1122,9 +1135,11 @@ namespace TestServer
             // 
             // dataGridTestsOfG
             // 
+            this.dataGridTestsOfG.AllowUserToAddRows = false;
             this.dataGridTestsOfG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridTestsOfG.Location = new System.Drawing.Point(7, 33);
             this.dataGridTestsOfG.Name = "dataGridTestsOfG";
+            this.dataGridTestsOfG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTestsOfG.Size = new System.Drawing.Size(741, 292);
             this.dataGridTestsOfG.TabIndex = 12;
             // 
@@ -1145,6 +1160,7 @@ namespace TestServer
             this.comboBoxTestsOfGr.Name = "comboBoxTestsOfGr";
             this.comboBoxTestsOfGr.Size = new System.Drawing.Size(221, 21);
             this.comboBoxTestsOfGr.TabIndex = 10;
+            this.comboBoxTestsOfGr.SelectedIndexChanged += new System.EventHandler(this.comboBoxTestsOfGr_SelectedIndexChanged);
             // 
             // tabPageDelT
             // 
@@ -1160,6 +1176,7 @@ namespace TestServer
             // 
             // buttonDelTest
             // 
+            this.buttonDelTest.Enabled = false;
             this.buttonDelTest.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelTest.Location = new System.Drawing.Point(4, 291);
             this.buttonDelTest.Name = "buttonDelTest";
@@ -1167,14 +1184,18 @@ namespace TestServer
             this.buttonDelTest.TabIndex = 14;
             this.buttonDelTest.Text = " Delete Test";
             this.buttonDelTest.UseVisualStyleBackColor = true;
+            this.buttonDelTest.Click += new System.EventHandler(this.buttonDelTest_Click);
             // 
             // dataGridDeleteTest
             // 
+            this.dataGridDeleteTest.AllowUserToAddRows = false;
             this.dataGridDeleteTest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridDeleteTest.Location = new System.Drawing.Point(4, 6);
             this.dataGridDeleteTest.Name = "dataGridDeleteTest";
+            this.dataGridDeleteTest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridDeleteTest.Size = new System.Drawing.Size(741, 279);
             this.dataGridDeleteTest.TabIndex = 13;
+            this.dataGridDeleteTest.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridDeleteTest_MouseClick);
             // 
             // tabResults
             // 
@@ -1216,6 +1237,10 @@ namespace TestServer
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(755, 269);
             this.dataGridView1.TabIndex = 15;
+            // 
+            // openFileDialogTests
+            // 
+            this.openFileDialogTests.FileName = "openFileDialog1";
             // 
             // FormTestServer
             // 
@@ -1263,8 +1288,8 @@ namespace TestServer
             this.tabTests.ResumeLayout(false);
             this.tabTasts.ResumeLayout(false);
             this.tabPageLoadT.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxTests.ResumeLayout(false);
+            this.groupBoxTests.PerformLayout();
             this.tabPageAllT.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTests)).EndInit();
             this.tabPageAssT.ResumeLayout(false);
@@ -1329,7 +1354,7 @@ namespace TestServer
         private System.Windows.Forms.TabControl tabTasts;
         private System.Windows.Forms.TabPage tabPageLoadT;
         private System.Windows.Forms.Button buttonOpenTest;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxTests;
         private System.Windows.Forms.Button buttonCancelTest;
         private System.Windows.Forms.Button buttonSaveT;
         private System.Windows.Forms.TextBox textBoxQuestions;
@@ -1384,5 +1409,6 @@ namespace TestServer
         private System.Windows.Forms.DataGridView dataGridViewUinG;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBoxAdUtoG;
+        private System.Windows.Forms.OpenFileDialog openFileDialogTests;
     }
 }

@@ -18,7 +18,7 @@ namespace DAL_TestSystem
         
         public string Discription { get; set; }
       
-        public bool IsAdmin { get; set; }
+        public bool IsRight { get; set; }
 
         public int? QuestionsId { get; set; }
         public Questions Questions { get; set; }
