@@ -126,6 +126,7 @@ namespace TestServer
             this.Controls.Add(this.label2);
             this.Name = "FormEnterServer";
             this.Text = "Server";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormEnterServer_FormClosing);
             this.groupBoxLogin.ResumeLayout(false);
             this.groupBoxLogin.PerformLayout();
             this.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL_TestSystem
 {
+    [Serializable]
     public class Answers
     {
         public Answers()

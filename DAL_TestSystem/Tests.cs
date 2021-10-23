@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DAL_TestSystem
 {
+    [Serializable]
     public class Tests
     {
         public Tests()
@@ -16,6 +18,7 @@ namespace DAL_TestSystem
         public string Title { get; set; }
 
         public string Author { get; set; }
+        public int QuestoionsCount { get; set; }
 
         public ICollection<Questions> Questions { get; set; }
         public ICollection<TestGroup> TestGroup { get; set; }

@@ -46,5 +46,11 @@
     <Compile Include="QuestionDLL.cs" />
     <Compile Include="TestDll.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_TestSystem\DAL_TestSystem.csproj">
+      <Project>{C4558552-44A1-485D-91D3-625D755B7F44}</Project>
+      <Name>DAL_TestSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

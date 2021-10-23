@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAL_TestSystem
 {
+    [Serializable]
     public class User
     {
         public User()

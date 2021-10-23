@@ -8,7 +8,11 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -26,13 +30,10 @@ namespace TestServer
         IGenericRepository<Tests> repTests;
         Tests tests;
         IGenericRepository<Questions> repQuestions;
-        //Questions questions;
         IGenericRepository<Answers> repAnswers;
-        //Answers answers;
         IGenericRepository<TestGroup> repTestGroup;
         TestGroup testGroup;
-
-
+        IGenericRepository<Results> repResults;
         TestDll loadTest = new TestDll();
 
 
@@ -97,29 +98,32 @@ namespace TestServer
                 id=x.Id,
                 Author = x.Author,
                 Title = x.Title,
-                NumberOfQuestions=x.Questions.Count
+                NumberOfQuestions=x.QuestoionsCount
             }).ToList();
             dataGridViewTestAssG.DataSource = repTests.GetAllData().Select(x => new
             {
                 id = x.Id,
                 Author = x.Author,
                 Title = x.Title,
-                NumberOfQuestions = x.Questions.Count
+                NumberOfQuestions = x.QuestoionsCount
             }).ToList();
             dataGridViewGroupsTests.DataSource = null;
             dataGridTestsOfG.DataSource = null;
-            dataGridDeleteTest.DataSource = repTests.GetAllData().Select(x => new
-            {
-                id = x.Id,
-                Author = x.Author,
-                Title = x.Title,
-                NumberOfQuestions = x.Questions.Count
-            }).ToList();
 
             comboBoxAssG.Items.Clear();
             comboBoxAssG.Items.AddRange(repGroup.GetAllData().Select(x => x.Name).ToArray());
             comboBoxTestsOfGr.Items.Clear();
             comboBoxTestsOfGr.Items.AddRange(repGroup.GetAllData().Select(x => x.Name).ToArray());
+
+            //Results
+            dataGridViewResults.DataSource = repResults.GetAllData().Select(x => new
+            {
+                id = x.Id,
+                User=x.User.FName,
+                Group=x.Tests.Title,
+                Mark=x.Mark,
+                Date=x.DateUserAnswer.Date
+            }).ToList();
         }
         #endregion
         public FormTestServer()
@@ -137,8 +141,10 @@ namespace TestServer
             repQuestions = work.Repository<Questions>();
             repAnswers = work.Repository<Answers>();
             repTestGroup = work.Repository<TestGroup>();
+            repResults = work.Repository<Results>();
             FillDatagreeds();
 
+           
         }
         #region//Groups
         private void buttonAddGroupe_Click(object sender, EventArgs e)
@@ -360,6 +366,7 @@ namespace TestServer
 
         #endregion
 
+        #region//Tests
         private void buttonOpenTest_Click(object sender, EventArgs e)
         {
             if (openFileDialogTests.ShowDialog() == DialogResult.Cancel)
@@ -388,7 +395,8 @@ namespace TestServer
                 tests = new Tests()
                 {
                     Author = loadTest.Author,
-                    Title = loadTest.TestName
+                    Title = loadTest.TestName,
+                    QuestoionsCount=loadTest.Questions.Count
                 };
                 repTests.Add(tests);
                 work.SaveChanges();
@@ -400,6 +408,7 @@ namespace TestServer
                         Difficulty = item.Difficulty,
                         Tests=tests
                     };
+                    
                     repQuestions.Add(q);
                     work.SaveChanges();
                     foreach (var ans in item.Answers)
@@ -422,7 +431,6 @@ namespace TestServer
         }
         private void buttonCancelTest_Click(object sender, EventArgs e)
         {
-            //tests = null;
             textBoxAuthor.Text = "";
             textBoxTitleTest.Text ="";
             textBoxQuestions.Text = "";
@@ -436,7 +444,7 @@ namespace TestServer
                 Group = group.Name,
                 Author = x.Tests.Author,
                 Title=x.Tests.Title,
-                NumberOfQuestions=x.Tests.Questions.Count
+                NumberOfQuestions=x.Tests.QuestoionsCount
             }).ToList();
         }
 
@@ -456,12 +464,13 @@ namespace TestServer
             };
             repTestGroup.Add(testGroup);
             work.SaveChanges();
+
             dataGridViewGroupsTests.DataSource = group.TestGroups.Select(x => new
             {
                 Group = group.Name,
                 Author = x.Tests.Author,
                 Title = x.Tests.Title,
-                NumberOfQuestions = x.Tests.Questions.Count
+                NumberOfQuestions = x.Tests.QuestoionsCount
             }).ToList();
 
         }
@@ -474,52 +483,23 @@ namespace TestServer
                 Group = group.Name,
                 Author = x.Tests.Author,
                 Title = x.Tests.Title,
-                NumberOfQuestions = x.Tests.Questions.Count
+                NumberOfQuestions = x.Tests.QuestoionsCount
             }).ToList();
         }
-        private void dataGridDeleteTest_MouseClick(object sender, MouseEventArgs e)
-        {
-            var id = dataGridDeleteTest.SelectedRows[0].Cells[0].Value;
-            tests = repTests.FindById(id);
-            buttonDelTest.Enabled = true;
-        }
-        private void buttonDelTest_Click(object sender, EventArgs e)
-        {
-            
-           // foreach (var q in tests.Questions)
-           // {
-                
-           //     foreach (var ans in q.Answers)
-           //     {
-           //         //ans.Questions = null;
-           //         //ans.QuestionsId = null;
-           //         q.Answers.Remove(ans);
-           //         repAnswers.Remove(ans);
-           //         //work.SaveChanges();
-           //     }
-           //     //q.Answers.Clear();
-           //     //item.TestsId = null;
-           //     //item.Tests = null;
-           //     tests.Questions.Remove(q);
-           //     repQuestions.Remove(q);
-           //     //work.SaveChanges();
-           // }
-           // testGroup = repTestGroup.FindAll(x => x.TestsId == tests.Id).FirstOrDefault();
-           // if (testGroup!=null)
-           // {
-           //     testGroup.GroupId = null;
-           //     testGroup.Groups = null;
-           //     testGroup.TestsId = null;
-           //     testGroup.Tests = null;
-           //     repTestGroup.Remove(testGroup);
-           // }
 
-           // tests.Questions.Clear();
-           // repTests.Remove(tests);
-           //// work.SaveChanges();
-           // FillDatagreeds();
+        private void buttonRefreshResult_Click(object sender, EventArgs e)
+        {
+            dataGridViewResults.DataSource = repResults.GetAllData().Select(x => new
+            {
+                id = x.Id,
+                User = x.User.FName,
+                Group = x.Tests.Title,
+                Mark = x.Mark,
+                Date = x.DateUserAnswer.Date
+            }).ToList();
         }
+        #endregion
 
-        
+
     }
 }

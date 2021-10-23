@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Answers.cs" />
+    <Compile Include="Info.cs" />
     <Compile Include="Results.cs" />
     <Compile Include="TestGroup.cs" />
     <Compile Include="MyContextInitializer.cs" />

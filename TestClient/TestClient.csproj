@@ -5,10 +5,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1EB2643B-80AC-44AD-9CD9-212C833AFFA5}</ProjectGuid>
+    <ProjectGuid>{479FB4AE-BCA9-4DC0-B532-AB0C0D6AB3E6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TestServer</RootNamespace>
-    <AssemblyName>TestServer</AssemblyName>
+    <RootNamespace>TestClient</RootNamespace>
+    <AssemblyName>TestClient</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,7 +45,24 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,25 +75,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormEnterServer.cs">
+    <Compile Include="FormEnterUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEnterServer.Designer.cs">
-      <DependentUpon>FormEnterServer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTestServer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTestServer.Designer.cs">
-      <DependentUpon>FormTestServer.cs</DependentUpon>
+    <Compile Include="FormEnterUser.Designer.cs">
+      <DependentUpon>FormEnterUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormEnterServer.resx">
-      <DependentUpon>FormEnterServer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTestServer.resx">
-      <DependentUpon>FormTestServer.cs</DependentUpon>
+    <Compile Include="UserTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTestForm.Designer.cs">
+      <DependentUpon>UserTestForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormEnterUser.resx">
+      <DependentUpon>FormEnterUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserTestForm.resx">
+      <DependentUpon>UserTestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,7 +128,7 @@
       <Name>Repository</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestDesignerDLL\TestDesignerDLL.csproj">
-      <Project>{5B593354-83F7-43C1-BE7F-1CA3035EF87C}</Project>
+      <Project>{5b593354-83f7-43c1-be7f-1ca3035ef87c}</Project>
       <Name>TestDesignerDLL</Name>
     </ProjectReference>
   </ItemGroup>

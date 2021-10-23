@@ -24,6 +24,7 @@ namespace TestDesinarer_11._10._21
 
         private void buttonOpenTest_Click(object sender, EventArgs e)
         {
+            
             if (openFileDialogOpeTest.ShowDialog()==DialogResult.Cancel)
             {
                 return;
@@ -36,6 +37,7 @@ namespace TestDesinarer_11._10._21
                 {
                     editTest = (TestDll)formatter.Deserialize(fs);
                 }
+                listBoxQuestions.Items.Clear();
                 textBoxAuthor.Text = editTest.Author;
                 textBoxTitle.Text = editTest.TestName;
                 foreach (var question in editTest.Questions)
@@ -140,6 +142,9 @@ namespace TestDesinarer_11._10._21
         }
         private void buttonSave_Click(object sender, EventArgs e)
         {
+            editTest.Author = textBoxAuthor.Text;
+            editTest.TestName = textBoxTitle.Text;
+           
             XmlSerializer formatter = new XmlSerializer(typeof(TestDll));
             using (FileStream fs = new FileStream(FileName, FileMode.Create))
             {
@@ -152,6 +157,9 @@ namespace TestDesinarer_11._10._21
             listBoxQuestions.Items.Clear();
             comboBoxAnswers.Items.Clear();
             numericUpDownDificulty.Value = 0;
+            comboBoxAnswers.Items.Clear();
+            comboBoxAnswers.Text = "";
+            checkBoxIsRight.Checked = false;
         }
 
       
